@@ -19,8 +19,7 @@
 	<body>
 		<h3>注册</h3>
 		<form action="" method="post" >
-			<div>昵称:<input type="text" id="user" /></div>
-			<div>破壳日:<input type="text" id="birth"/></div>
+			<div>用户名:<input type="text" id="user" /></div>
 			<div>密码: <input type="password" id="keyword" /></div>
 			<div>确认密码: <input type="password" id="keyword" /></div>
 			<input type="button" value="注册" onclick="pass()" class="box"/>
@@ -34,7 +33,7 @@
 			function pass() {
 				var password = document.getElementById("keyword").value;
 				if (password.length < 6) {
-					alert("密码太过于短")
+					alert("密码太短")
 					return;
 				} else {
 					var count = 0
@@ -46,10 +45,10 @@
 					if (count >= 2) {
 						alert("输入合法")
 					} else {
-						alert("密码必须含有两位字母")
+						alert("密码必须有两位字母")
 					}
 				}
-				alert("昵称是：" + (document.getElementById("user").value) + "密码是：" + (document.getElementById("keyword").value))
+				alert("用户名是：" + (document.getElementById("user").value) )
 			}
 		</script>
 	</body>
